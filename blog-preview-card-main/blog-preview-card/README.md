@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site URL](https://MrD0do.github.io/Frontendmentor/blog-preview-card)
+- Live Site URL: [Live Site URL](https://MrD0do.github.io/Frontendmentor/blog-preview-card-main/blog-preview-card)
 
 ## My process
 
