@@ -25,9 +25,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop view of the website](/design/desktop-view.png)
-![Mobile view of the website](/design/mobile-view.png)
-![Active state of the website](/design/active-status.png)
+![Desktop view of the website](./design/desktop-view.png)
+![Mobile view of the website](./design/mobile-view.png)
+![Active state of the website](./design/active-status.png)
 
 ### Links
 
