@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* ------ Default settings of the website ------ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-stone-900: hsl(24, 5%, 18%);
+    --txt-stone-600: hsl(30, 10%, 34%);
+    --txt-stone-150: hsl(30, 18%, 87%);
+    --txt-stone-100: hsl(30, 54%, 90%);
+    --txt-brown-800: hsl(14, 45%, 36%);
+    --txt-rose-800: hsl(332, 51%, 32%);
+    --txt-rose-050: hsl(330, 100%, 98%);
+
+    --text-weight-400: 400;
+    --text-weight-600: 600;
+    --text-weight-700: 700;
+}
+
+body {
+    background-color: var(--txt-stone-100);
+    width: 100vw;
+    min-height: 100dvh;
+}
+
+h1, h2 {
+    font-family: "young-serif";
+    color: var(--txt-brown-800);
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: var(--text-weight-600);
+    margin: .5em 0;
+}
+
+/* ------------ THE MAIN SECITON ----------------- */
+
+/* ----- the settings of the recipe ----- */
+
+.recipe-container {
+    max-width: 580px;
+    margin: 6em auto;
+    padding: 2em;
+    background-color: var(--txt-rose-050);
+    border-radius: 10px;
+}
+
+/* ----- the omelette image on the top of the recipe ----- */
+
+.recipe-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* border: 2px solid blue; */
+}
+
+/* ----- the general-info section ----- */
+
+.general-info h1 { 
+    font-size: 2.1rem;
+    color: var(--txt-stone-900);
+    font-weight: var(--text-weight-700);
+    margin: .5em 0;
+}
+
+.general-info p { 
+    font-family: "Outfit";
+    font-size: .8rem;
+    width: 61ch;
+    margin: 0; 
+    line-height: 1.5;
+    text-align: justify;
+    color: var(--txt-stone-600);
+}
+
+.general-info h3 {
+    font-size: 1.1rem;
+    font-family: "Outfit";
+    color: var(--txt-rose-800);
+    margin: 2.3em 1.2em 0 .7em;
+}
+
+.general-info ul {
+    margin: .5em 1.3em 1.8em 3.3em;
+    font-family: "Outfit";
+    font-size: .8rem;
+    line-height: 2;
+    /* border: 2px solid blue; */
+}
+
+.general-info ul li {
+    padding-left: 1.1em;
+}
+
+.general-info ul li::marker {
+    color: var(--txt-rose-800);
+}
+
+.general-info li b {
+    color: var(--txt-stone-900);
+}
+
+/* ----- the ingredients section ----- */
+
+.ingredients {
+    /* border: 2px solid blue; */
+    margin: 0 1.3em 2em 0;
+}
+
+.ingredients ul {
+    margin: 0 0 0 1.6em;
+    font-family: "Outfit";
+    font-size: .8rem;
+    line-height: 2;
+    color: var(--txt-stone-600);
+    /* border: 2px solid blue; */
+}
+
+.ingredients ul li::marker {
+    color: var(--txt-brown-800);
+}
+
+/* ----- the instructions section ----- */
+
+.instructions {
+    border-bottom: 1px solid var(--txt-stone-150);
+    padding-bottom: 1.4em;
+
+}
+
+.instructions ol {
+    margin: 0 0 0 1.3em;
+    font-family: "Outfit";
+    font-size: .8rem;
+    line-height: 2;
+    color: var(--txt-stone-600);
+    /* border: 2px solid blue; */
+}
+
+.instructions ol li {
+    padding-left: .6em;
+}
+.instructions ol li::marker {
+    color: var(--txt-brown-800);
+    font-weight: bold;
+}
+
+/* ----- the nutrition table section ----- */
+
+.nutrition {
+    /* border: 2px solid blue; */
+    margin: 1.5em 1.3em 0 0;
+}
+
+.nutrition p {
+    margin: 0 0 1em 0;
+    color: var(--txt-stone-600);
+    font-family: "Outfit";
+    font-size: .8rem;
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Outfit";
+    font-size: .8rem;
+    line-height: 2;
+    color: var(--txt-stone-600);
+    /* border: 2px solid blue; */
+}
+
+.nutrition table td { 
+    padding: .6em .6em .6em 1.7em;
+    text-align: left;
+    border-bottom: 1px solid var(--txt-stone-100);
+    /* border: 2px solid blue; */
+}
+
+.nutrition table td:nth-child(2n) {
+    color: var(--txt-brown-800);
+    font-weight: bold;
+}
+/* ------------ THE FOOTER SECITON ----------------- */
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ------ Responsive design ------ */
+
+@media screen and (max-width: 645px) {
+
+    h2 {
+        font-size: 2rem;
+        font-weight: var(--text-weight-600);
+        margin: .5em 0;
+    }
+
+    /* ------ the recipe section ------ */
+   .recipe-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        height: 100%;
+   }
+
+   .recipe-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ------ the general-info section ------ */
+   .general-info {
+    padding: 0 2em;
+   }
+   
+    .general-info h1 {
+        font-size: 3rem;    
+        margin: .5em 0;
+    }
+
+    .general-info p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .general-info h3 {
+        font-size: 1.3rem;
+        margin: 2.5em 1.2em .5em .9em;
+    }
+
+    .general-info ul {
+        font-size: .95rem;
+        /* border: 2px solid blue; */
+    }
+
+/* ------ the ingredients section ------ */
+
+    .ingredients {
+        /* border: 2px solid blue; */
+        padding: 0 2em;
+    }
+    
+    .ingredients ul {
+        font-size: .95rem;
+        /* border: 2px solid blue; */
+    }
+
+    .instructions {
+        padding: 0 0 1.6em 2em;
+    }
+
+    /* ------ the instructions section ------ */
+
+    .instructions ol {
+      margin: 0 2em;
+      font-size: 1rem;
+     /* border: 2px solid blue; */
+    }
+    
+    .instructions ol li {
+        width: 100%;
+        padding-left: 0;
+    }
+
+/* ------ the nutrition table section ------ */
+
+    .nutrition {
+        /* border: 2px solid blue; */
+        margin: 1.8em 1.3em 0 0;
+    }
+    
+    .nutrition p {
+        margin: 1.2em 0 1.2em 0;
+        font-size: .95rem;
+        text-align: justify;
+    }
+    
+    .nutrition table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Outfit";
+        font-size: .95rem;
+        line-height: 2;
+        color: var(--txt-stone-600);
+        /* border: 2px solid blue; */
+    }
+    
+    .nutrition table td { 
+        padding: .6em .6em .6em 1.7em;
+        text-align: left;
+        border-bottom: 1px solid var(--txt-stone-150);
+        /* border: 2px solid blue; */
+    }
+    
+    .nutrition table td:nth-child(2n) {
+        color: var(--txt-brown-800);
+        font-weight: bold;
+    }
+
+/* ------ the FOOTER section ------ */
+
+    .attribution { 
+        opacity: 0;
+    }
+}
+
+ @media screen and (max-width: 400px) {
+
+    /* ------ the recipe section ------ */
+
+    .recipe-container img {
+        overflow: hidden;
+    }
+
+    /* ------ the general-info section ------ */
+
+    .general-info h1 { 
+        font-size: 2.6rem;
+        margin: 0.6em 0;
+    }
+    
+    .general-info p {
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .general-info h3 {
+        margin: 2.5em 1.2em .5em 1.2em;
+    }
+    
+    .general-info ul {
+        padding-right: 8px;
+    }
+
+/* ------ the ingredients section ------ */
+
+    .ingredients ul {
+        line-height: 1.95;
+        /* border: 2px solid blue; */
+    }
+
+/* ------ the instructions section ------ */
+
+    .instructions {
+        padding: 0 0 1.6em 2em;
+    }
+    
+    .instructions ol {
+      margin: 0 2em;
+      font-size: .95rem;
+     /* border: 2px solid blue; */
+    }
+
+    .instructions ol li {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+/* ------ the nutrition table section ------ */
+
+    .nutrition p {
+        margin: 1.2em 0 1.4em 0;
+        font-size: .98rem;
+        text-align: justify;
+    }
+
+    .nutrition {
+        padding: 0 2em;
+    }
+ }
