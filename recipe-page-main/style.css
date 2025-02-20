@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* ------ Default settings of the website ------ */
@@ -17,6 +18,7 @@
     --txt-brown-800: hsl(14, 45%, 36%);
     --txt-rose-800: hsl(332, 51%, 32%);
     --txt-rose-050: hsl(330, 100%, 98%);
+    --white: hsl(0, 100%, 100%);
 
     --text-weight-400: 400;
     --text-weight-600: 600;
@@ -30,12 +32,12 @@ body {
 }
 
 h1, h2 {
-    font-family: "young-serif";
+    font-family: "Young Serif";
     color: var(--txt-brown-800);
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: var(--text-weight-600);
     margin: .5em 0;
 }
@@ -48,7 +50,7 @@ h2 {
     max-width: 580px;
     margin: 6em auto;
     padding: 2em;
-    background-color: var(--txt-rose-050);
+    background-color: var(--white);
     border-radius: 10px;
 }
 
@@ -64,9 +66,8 @@ h2 {
 /* ----- the general-info section ----- */
 
 .general-info h1 { 
-    font-size: 2.1rem;
+    font-size: 2rem;
     color: var(--txt-stone-900);
-    font-weight: var(--text-weight-700);
     margin: .5em 0;
 }
 
@@ -80,30 +81,43 @@ h2 {
     color: var(--txt-stone-600);
 }
 
-.general-info h3 {
+
+
+/* -------- preparation-time container ---------- */
+
+.preparation-time-container {
+    background-color: var(--txt-rose-050);
+    /* border: 2px solid blue; */
+    width: 100%;
+    margin: 2.3em 1.2em 1.5em 0em;
+    border-radius: 10px;
+    padding: 1.2em 1em 0.1em 1em;
+}
+
+.preparation-time-container h3 {
     font-size: 1.1rem;
     font-family: "Outfit";
     color: var(--txt-rose-800);
-    margin: 2.3em 1.2em 0 .7em;
+    padding-left: 0.1em;
 }
 
-.general-info ul {
-    margin: .5em 1.3em 1.8em 3.3em;
+.preparation-time-container ul {
+    margin: .5em 1.3em 1.8em 1.8em;
     font-family: "Outfit";
     font-size: .8rem;
     line-height: 2;
     /* border: 2px solid blue; */
 }
 
-.general-info ul li {
+.preparation-time-container ul li {
     padding-left: 1.1em;
 }
 
-.general-info ul li::marker {
+.preparation-time-container ul li::marker {
     color: var(--txt-rose-800);
 }
 
-.general-info li b {
+.preparation-time-container li b {
     color: var(--txt-stone-900);
 }
 
@@ -201,7 +215,7 @@ h2 {
 @media screen and (max-width: 645px) {
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: var(--text-weight-600);
         margin: .5em 0;
     }
@@ -225,7 +239,7 @@ h2 {
    }
    
     .general-info h1 {
-        font-size: 3rem;    
+        font-size: 2.5rem;    
         margin: .5em 0;
     }
 
@@ -234,12 +248,13 @@ h2 {
         width: 100%;
     }
 
-    .general-info h3 {
+    /* ------ preparation-time section ------ */
+
+    .preparation-time-container h3 {
         font-size: 1.3rem;
-        margin: 2.5em 1.2em .5em .9em;
     }
 
-    .general-info ul {
+    .preparation-time-container ul {
         font-size: .95rem;
         /* border: 2px solid blue; */
     }
@@ -278,6 +293,7 @@ h2 {
     .nutrition {
         /* border: 2px solid blue; */
         margin: 1.8em 1.3em 0 0;
+        padding: 0 2em;
     }
     
     .nutrition p {
@@ -326,8 +342,8 @@ h2 {
     /* ------ the general-info section ------ */
 
     .general-info h1 { 
-        font-size: 2.6rem;
-        margin: 0.6em 0;
+        font-size: 2.3rem;
+        margin: 0.5em 0;
     }
     
     .general-info p {
@@ -335,11 +351,9 @@ h2 {
         width: 100%;
     }
     
-    .general-info h3 {
-        margin: 2.5em 1.2em .5em 1.2em;
-    }
+    /* ------ preparation-time section ------ */
     
-    .general-info ul {
+    .preparation-time-container ul {
         padding-right: 8px;
     }
 
@@ -371,11 +385,7 @@ h2 {
 
     .nutrition p {
         margin: 1.2em 0 1.4em 0;
-        font-size: .98rem;
+        font-size: 1rem;
         text-align: justify;
-    }
-
-    .nutrition {
-        padding: 0 2em;
     }
  }
