@@ -26,10 +26,10 @@ Users should be able to:
 
 ### Screenshot
 
-![the desktop view of the webstite](/design/desktop-view.png)
-![the mobile view of the website](/design/mobile-view.png)
-![button hover active state](/design/btn-hover.png)
-![image hover active state](/design/img-hover.png)
+![the desktop view of the webstite](./design/desktop-view.png)
+![the mobile view of the website](./design/mobile-view.png)
+![button hover active state](./design/btn-hover.png)
+![image hover active state](./design/img-hover.png)
 
 ### Links
 

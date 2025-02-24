@@ -22,7 +22,6 @@ body {
     background-color: var(--neutral-clr-cream);
     width: 100dvw;
     min-height: 100dvh;
-    overflow: hidden;
     display: grid;
     align-content: center;
     justify-content: center;
