@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----- Default settings of the website ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr-green-500: hsl(158, 36%, 37%);
+    --primary-clr-green-700: hsl(158, 42%, 18%);
+
+    --neutral-clr-black: hsl(212, 21%, 14%);
+    --neutral-clr-grey: hsl(228, 12%, 48%);
+    --neutral-clr-cream: hsl(30, 38%, 92%);
+    --neutral-clr-white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--neutral-clr-cream);
+    width: 100dvw;
+    min-height: 100dvh;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+/* ----- card-container stylings ------ */
+
+.product-card-container {
+    max-width: 650px;
+    background-color: var(--neutral-clr-white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ----- image part of the card-container ----- */
+
+.product-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    display: block;
+    object-fit: cover;
+    transition: filter .5s ease-in-out;
+}
+
+/* ----- information part of the card-container ----- */
+
+.product-card-info {
+    display: grid;
+    padding: 2em;
+}
+
+.product-card-info h1 { /* "parfume" category */
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--neutral-clr-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.product-card-info h2 { /* the parfume name */
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 700;
+    width: 10ch;
+}
+
+.product-card-info p { /* the parfume description */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--neutral-clr-grey);
+}
+
+/* ----- the price section ------ */
+
+.price-container { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.price {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-clr-green-500);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--neutral-clr-grey);
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+/* ------ button section ------ */
+
+.btn-order {
+    background-color: var(--primary-clr-green-500);
+    color: var(--neutral-clr-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .6em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    transition: background-color .1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-order img { /* a shopping cart inside the buttton */
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+
+}
+
+/* ----- hover stylings ------ */
+
+.product-card-image img:hover {
+    filter: grayscale(100%);
+}
+
+.btn-order:hover {
+    background-color: var(--primary-clr-green-700);
+}
+
+/* ----- media queries ------ */
+
+@media screen and (max-width: 650px) {
+    body {
+        grid-template-columns: 1free;
+        gap: 0;
+        padding: 3em;
+    }
+
+    .product-card-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1em;
+        padding: 0;
+    }
+
+    .product-card-info {
+        padding: 1em;
+        row-gap: 1em;
+    }
+
+    .product-card-image img {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card-info h2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0 1em;
+    }
+
+    .product-card-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.8fr;
+        grid-gap: 0em;
+    }
+
+    .product-card-image img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: auto;
+    }   
+
+    .product-card-info {
+        padding: 1.5em 2em 2em 1.5em;
+        row-gap: 0;
+    }
+
+    .product-card-info h2 {
+        width: 100%;
+        font-size: 2.3rem;
+    }
+
+    .product-card-info p {
+        font-size: 1rem;
+        width: 100%;
+        line-height: 1.9;
+    }
+
+    .btn-order {
+        font-size: 1.2rem;
+        padding: 0.4em;
+    }
+}
